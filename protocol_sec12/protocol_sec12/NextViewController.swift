@@ -7,9 +7,9 @@
 //プロトコル
 
 import UIKit
-//
+//仕様書
 protocol CatchProtocol {
-    //規則決める,メソッドしてい
+    //規則決める,メソッドしてい、
     func catchData(count:Int)
 }
 
@@ -25,13 +25,14 @@ class NextViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
     @IBAction func plusAction(_ sender: Any) {
         count = count + 1
         //キャスト
         label.text = String(count)
     }
     @IBAction func back(_ sender: Any) {
-        //上部プロトコル、デリゲートメソッドを任せたクラスで発動させる
+        //上部プロトコル、デリゲートメソッドを任せたクラスで発動させる　表示された数字が入る
         delegate?.catchData(count: count)
         //閉じる
         dismiss(animated: true, completion: nil)

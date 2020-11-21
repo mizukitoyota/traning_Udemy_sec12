@@ -36,7 +36,7 @@
                     </view>
                     <connections>
                         <outlet property="label" destination="Sfo-qt-jbP" id="U86-fB-abk"/>
-                        <segue destination="1jE-Aa-nvQ" kind="presentation" modalPresentationStyle="fullScreen" id="ZEV-r8-rGV"/>
+                        <segue destination="1jE-Aa-nvQ" kind="presentation" identifier="next" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ZEV-r8-rGV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

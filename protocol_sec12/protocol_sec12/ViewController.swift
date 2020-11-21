@@ -19,11 +19,17 @@ class ViewController: UIViewController,CatchProtocol {
         
     }
     func catchData(count: Int) {
-         
+        label.text = String(count)
      }
-
+//画面遷移 次へボタン　performSegueー
     @IBAction func next(_ sender: Any) {
-        
+        performSegue(withIdentifier: "next", sender: nil)
+    }
+    //デリゲートメソッド使用
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! NextViewController
+        //自分をデリゲートに委任（）
+        nextVC.delegate = self
     }
     
 }
